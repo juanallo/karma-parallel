@@ -6,7 +6,7 @@ module.exports = function(config) {
       'karma-chrome-launcher',
       require('..')
     ],
-    frameworks: ['parallel'],
+    frameworks: ['parallelize'],
     reporters: ['progress'],
     files: ['test/*.js'],
     exclude: ['test/*.focused.spec.js'],
