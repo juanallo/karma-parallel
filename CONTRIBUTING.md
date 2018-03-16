@@ -10,4 +10,4 @@ Please see the [Contributing to Karma] guide for information on contributing to 
 
 Running `npm test` will cause the plugin to load and execute in the context of the local test directory.
 
-Ensure that you have not skipped optional dependencies when running npm install.  You will need karma-coverage to be loaded for the tests to demonstrate that our overwritten reporter worked correctly.
+Ensure that you have not skipped optional dependencies when running yarn.  You will need karma-coverage to be loaded for the tests to demonstrate that our overwritten reporter worked correctly.

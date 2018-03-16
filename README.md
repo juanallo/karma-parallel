@@ -19,18 +19,18 @@ This leads to a way to split up unit tests across multiple browsers without chan
 
 ## Installation
 
-The easiest way is to install `karma-parallel` as a `devDependency`.
+The easiest way is to install `karma-parallelize` as a `devDependency`.
 
 **Using NPM**
 
 ```bash
-npm i karma-parallel --save-dev
+npm i karma-parallelize --save-dev
 ```
 
 **Using Yarn**
 
 ```bash
-yarn add karma-parallel --dev
+yarn add karma-parallelize --dev
 ```
 
 
@@ -43,7 +43,7 @@ yarn add karma-parallel --dev
 module.exports = function(config) {
   config.set({
     // NOTE: 'parallel' must be the first framework in the list
-    frameworks: ['parallel', 'mocha' /* or 'jasmine' */],
+    frameworks: ['parallel', 'mocha'],
 
     parallelOptions: {
       executors: 4, // Defaults to cpu-count - 1
@@ -90,6 +90,19 @@ For more information on Karma see the [homepage].
 
 ## See Also
 
+[`karma-parallel`](https://github.com/joeljeske/karma-parallel)
+
+This is the project from where karma-parallelize was forked from.
+
+Pros: 
+
+* Jasmine is currently supported there
+
+Cons:
+
+* it uses a different strategy to define how tests are run in each browser. Ir resulted harder to read.
+* Does not work with Mocha TDD
+
 [`karma-sharding`](https://github.com/rschuft/karma-sharding)
 
 This similar project works by splitting up the actual spec files across the browser instances.
@@ -102,7 +115,6 @@ Cons:
 
 * Requires the spec files to reside in separate files, meaning it is not compatible with bundlers such
 as [`karma-webpack`](https://github.com/webpack-contrib/karma-webpack) or [`karma-browserify`](https://github.com/nikku/karma-browserify)
-
 
 
 [homepage]: http://karma-runner.github.com
